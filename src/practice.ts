@@ -1,5 +1,9 @@
-function sum(x: number, y: number): number {
-    return x + y;
+function sumArray(numbers: number[]): number {
+    return numbers.reduce((acc, current) => acc + current, 0);
 }
 
-sum(1, 2);
+const total = sumArray([1, 2, 3, 4, 5]);
+
+function returnNoting(): void {
+    console.log('I am just saying hello world');
+}
