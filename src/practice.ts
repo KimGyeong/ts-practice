@@ -4,11 +4,8 @@ interface Shape {
 
 // 상속받아 해당 클래스가 Shape interface 의 조건을 충족시킨다.
 class Circle implements Shape {
-    /* 멤버 변수 */    
-    radius: number;
-
     /* 생성자 */
-    constructor(radius: number) {
+    constructor(public radius: number) {
         this.radius = radius;
     }
 
@@ -19,10 +16,7 @@ class Circle implements Shape {
 }
 
 class Rectangle implements Shape {
-    width: number;
-    height: number;
-
-    constructor(width: number, height: number) {
+    constructor(private width: number, private height: number) {
         this.width = width;
         this.height = height;
     }
@@ -31,6 +25,12 @@ class Rectangle implements Shape {
         return this.width * this.height;
     }
 }
+
+const circle = new Circle(5);
+const rectangle = new Rectangle(10, 5);
+
+console.log(circle.radius);
+console.log(rectangle.width); // private 이기에 에러 발생
 
 const shapes: Shape[] = [new Circle(5), new Rectangle(10, 5)];
 
