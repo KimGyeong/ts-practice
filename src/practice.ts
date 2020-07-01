@@ -1,4 +1,4 @@
-interface Items<T> {
+type Items<T> = {
     list: T[];
 }
 
