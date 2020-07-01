@@ -1,0 +1,1 @@
+# https://velog.io/@velopert/typescript-basics 따라하기
